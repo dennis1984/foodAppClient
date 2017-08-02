@@ -1,19 +1,18 @@
 # -*- coding: utf8 -*-
-from rest_framework import viewsets
 from rest_framework import generics
-from rest_framework.response import Response
 from rest_framework import status
+from rest_framework import viewsets
+from rest_framework.response import Response
 
+from Business_Users.models import (BusinessUser,
+                                   make_token_expire,
+                                   )
+from users.forms import (UserListForm, )
+from users.permissions import IsAdminOrReadOnly, IsAuthenticated
 from users.serializers import (UserSerializer,
-                               UserInstanceSerializer,
                                UserDetailSerializer,
                                UserListSerializer,
                                )
-from users.permissions import IsAdminOrReadOnly, IsAuthenticated
-from Business_App.bz_users.models import (BusinessUser,
-                                          make_token_expire,
-                                          )
-from users.forms import (UserListForm,)
 
 
 class UserDetail(generics.GenericAPIView):
@@ -33,8 +32,6 @@ class UserDetail(generics.GenericAPIView):
 
 
 class UserList(generics.GenericAPIView):
-    queryset = BusinessUser.objects.all()
-    serializer_class = UserDetailSerializer
     permission_classes = (IsAdminOrReadOnly, )
 
     def get_objects_list(self, request, **kwargs):

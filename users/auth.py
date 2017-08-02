@@ -1,6 +1,6 @@
-from django.contrib.auth.models import User
-from Business_App.bz_users.models import BusinessUser
 from django.utils.timezone import now
+
+from Business_Users.models import BusinessUser
 
 
 class BusinessUserBackend(object):

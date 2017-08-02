@@ -1,15 +1,13 @@
 # -*- coding:utf8 -*-
-from django.contrib.auth.hashers import make_password
-from rest_framework import serializers
-from horizon.serializers import (BaseListSerializer,
-                                 BaseModelSerializer,
-                                 BaseSerializer,
-                                 timezoneStringTostring)
-from Business_App.bz_users.models import BusinessUser
+import os
 
 from django.conf import settings
-from horizon.models import model_to_dict
-import os
+from django.contrib.auth.hashers import make_password
+from rest_framework import serializers
+
+from Business_Users.models import BusinessUser
+from horizon.serializers import (BaseListSerializer,
+                                 timezoneStringTostring)
 
 
 class UserSerializer(serializers.ModelSerializer):
