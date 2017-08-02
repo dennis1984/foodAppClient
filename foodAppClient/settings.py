@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     # 'rest_framework.authtoken',
     'oauth2_provider',
     'users',
-    'Business_App',
+    'Business_App.bz_users',
 ]
 
 MIDDLEWARE = [
@@ -98,7 +98,7 @@ DATABASES = {
     }
 }
 
-DATABASE_ROUTERS = ['foodAppClient.router.ConsumerAppRouter']
+DATABASE_ROUTERS = ['foodAppClient.router.FoodAppClientRouter']
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -133,7 +133,7 @@ USE_L10N = True
 USE_TZ = False
 
 
-AUTH_USER_MODEL = 'users.BusinessUser'
+AUTH_USER_MODEL = 'Business_App.bz_users.BusinessUser'
 
 AUTHENTICATION_BACKENDS = (
     # 'django.contrib.auth.backends.ModelBackend',

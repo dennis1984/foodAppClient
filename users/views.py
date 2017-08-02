@@ -8,7 +8,7 @@ from users.serializers import (UserSerializer,
                                UserInstanceSerializer,
                                UserDetailSerializer,
                                UserListSerializer,
-                               IdentifyingCodeSerializer)
+                               )
 from users.permissions import IsAdminOrReadOnly, IsAuthenticated
 from Business_App.bz_users.models import (BusinessUser,
                                           make_token_expire,

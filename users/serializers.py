@@ -1,11 +1,12 @@
 # -*- coding:utf8 -*-
 from django.contrib.auth.hashers import make_password
 from rest_framework import serializers
-from users.models import BusinessUser, IdentifyingCode
 from horizon.serializers import (BaseListSerializer,
                                  BaseModelSerializer,
                                  BaseSerializer,
                                  timezoneStringTostring)
+from Business_App.bz_users.models import BusinessUser
+
 from django.conf import settings
 from horizon.models import model_to_dict
 import os
@@ -67,10 +68,4 @@ class UserDetailSerializer(serializers.Serializer):
 
 class UserListSerializer(BaseListSerializer):
     child = UserDetailSerializer()
-
-
-class IdentifyingCodeSerializer(BaseModelSerializer):
-    class Meta:
-        model = IdentifyingCode
-        fields = '__all__'
 
