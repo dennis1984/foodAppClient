@@ -1,14 +1,10 @@
 # -*- coding:utf8 -*-
 from __future__ import unicode_literals
-import json
-import datetime
 
 from django.conf import settings
+
+from Business_App.bz_users.models import BusinessUser
 from horizon import redis
-from django.utils.timezone import now
-
-from Business_App.models import BusinessUser
-
 
 # 过期时间（单位：秒）
 EXPIRES_24_HOURS = 24 * 60 * 60
