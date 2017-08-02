@@ -66,6 +66,7 @@ class BusinessUser(AbstractBaseUser):
     class Meta:
         db_table = 'ys_auth_user'
         unique_together = ('business_name', 'food_court_id')
+        app_label = 'Business_App.bz_user.models.BusinessUser'
 
 
 ADVERT_PICTURE_DIR = settings.PICTURE_DIRS['business']['advert']
