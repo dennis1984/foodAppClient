@@ -4,4 +4,4 @@ from django.apps import AppConfig
 
 
 class Business_UsersConfig(AppConfig):
-    name = 'Business_Users'
+    name = 'Business_App'

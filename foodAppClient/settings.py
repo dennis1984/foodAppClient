@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     # 'rest_framework.authtoken',
     'oauth2_provider',
     'users',
-    'Business_Users',
+    # 'Business_App',
 ]
 
 MIDDLEWARE = [
@@ -133,7 +133,7 @@ USE_L10N = True
 USE_TZ = False
 
 
-AUTH_USER_MODEL = 'Business_Users.BusinessUser'
+AUTH_USER_MODEL = 'users.BusinessUser'
 
 AUTHENTICATION_BACKENDS = (
     # 'django.contrib.auth.backends.ModelBackend',

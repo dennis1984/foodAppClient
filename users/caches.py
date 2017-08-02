@@ -7,7 +7,7 @@ from django.conf import settings
 from horizon import redis
 from django.utils.timezone import now
 
-from Business_Users.models import BusinessUser
+from Business_App.models import BusinessUser
 
 
 # 过期时间（单位：秒）

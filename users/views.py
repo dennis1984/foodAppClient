@@ -4,9 +4,9 @@ from rest_framework import status
 from rest_framework import viewsets
 from rest_framework.response import Response
 
-from Business_Users.models import (BusinessUser,
-                                   make_token_expire,
-                                   )
+from users.models import (BusinessUser,
+                                 make_token_expire,
+                                 )
 from users.forms import (UserListForm, )
 from users.permissions import IsAdminOrReadOnly, IsAuthenticated
 from users.serializers import (UserSerializer,
