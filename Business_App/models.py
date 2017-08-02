@@ -66,7 +66,7 @@ class BusinessUser(AbstractBaseUser):
     class Meta:
         db_table = 'ys_auth_user'
         unique_together = ('business_name', 'food_court_id')
-        # app_label = 'Business_Users.bz_user.models.BusinessUser'
+        # app_label = 'Business_App.bz_user.models.BusinessUser'
 
 ADVERT_PICTURE_DIR = settings.PICTURE_DIRS['business']['advert']
 
@@ -96,7 +96,7 @@ class AdvertPicture(models.Model):
     class Meta:
         db_table = 'ys_advert_picture'
         ordering = ['-created']
-        # app_label = 'Business_Users.bz_user.models.AdvertPicture'
+        # app_label = 'Business_App.bz_user.models.AdvertPicture'
 
     def __unicode__(self):
         return self.name

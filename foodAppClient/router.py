@@ -8,27 +8,27 @@ class FoodAppClientRouter(object):
     """
     def db_for_read(self, model, **hints):
         module_name = self.get_module_name(model)
-        if module_name == 'Business_Users':
+        if module_name == 'Business_App':
             return 'business'
         return None
 
     def db_for_write(self, model, **hints):
         module_name = self.get_module_name(model)
-        if module_name == 'Business_Users':
+        if module_name == 'Business_App':
             return 'business'
         return None
 
     def allow_relation(self, obj1, obj2, **hints):
         obj1_module_name = self.get_module_name(obj1)
         obj2_module_name = self.get_module_name(obj2)
-        if obj1_module_name == 'Business_Users' or obj2_module_name == 'Business_Users':
+        if obj1_module_name == 'Business_App' or obj2_module_name == 'Business_App':
             return True
         return None
 
     def allow_syncdb(self, db, model):
         if db == 'business':
-            return model._meta.app_label == 'Business_Users'
-        elif model._meta.app_label == 'Business_Users':
+            return model._meta.app_label == 'Business_App'
+        elif model._meta.app_label == 'Business_App':
             return False
         return None
 
