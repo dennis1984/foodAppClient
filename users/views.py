@@ -10,9 +10,9 @@ from users.serializers import (UserSerializer,
                                UserListSerializer,
                                IdentifyingCodeSerializer)
 from users.permissions import IsAdminOrReadOnly, IsAuthenticated
-from users.models import (BusinessUser,
-                          make_token_expire,
-                          )
+from Business_App.bz_users.models import (BusinessUser,
+                                          make_token_expire,
+                                          )
 from users.forms import (UserListForm,)
 
 

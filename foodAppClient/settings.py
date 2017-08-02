@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # 'rest_framework.authtoken',
     'oauth2_provider',
     'users',
+    'Business_App',
 ]
 
 MIDDLEWARE = [
@@ -81,6 +82,14 @@ WSGI_APPLICATION = 'foodAppClient.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'yinShi_BZ_Client',
+        'USER': 'yinShi_project',
+        'PASSWORD': 'Con!082%Trib',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+    },
+    'business': {
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'yinShi',
         'USER': 'yinShi_project',
         'PASSWORD': 'Con!082%Trib',
@@ -89,7 +98,7 @@ DATABASES = {
     }
 }
 
-DATABASE_ROUTERS = ['Consumer_App.router.ConsumerAppRouter']
+DATABASE_ROUTERS = ['foodAppClient.router.ConsumerAppRouter']
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

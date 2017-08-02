@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from users.models import BusinessUser
+from Business_App.bz_users.models import BusinessUser
 from django.utils.timezone import now
 
 
