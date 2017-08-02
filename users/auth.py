@@ -1,6 +1,6 @@
 from django.utils.timezone import now
 
-from users.models import BusinessUser
+from Business_Users.models import BusinessUser
 
 
 class BusinessUserBackend(object):

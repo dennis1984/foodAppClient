@@ -5,7 +5,7 @@ from django.conf import settings
 from django.contrib.auth.hashers import make_password
 from rest_framework import serializers
 
-from users.models import BusinessUser
+from Business_Users.models import BusinessUser
 from horizon.serializers import (BaseListSerializer,
                                  timezoneStringTostring)
 
